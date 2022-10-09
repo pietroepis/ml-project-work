@@ -6,4 +6,5 @@ Docker
     Create an image -> docker build -t image_name .
     Create a container -> docker run --name container_name -p 8888:8888 image_name
 
-    Get Jupyter Token -> docker exec -it container_name conda run -n conda_env_name jupyter notebook list
+
+RUN /usr/local/bin/python -m pip install --upgrade pip
