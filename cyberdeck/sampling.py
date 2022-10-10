@@ -5,5 +5,5 @@ test = pd.read_csv("../datasets/classification/test.csv")
 # dataset = train.append(test, ignore_index = True)
 
 df = test.sample(n = 10000, random_state = 5, axis = 0)
-df.to_csv("./classification_samples_test.csv")
+df.to_csv("./samples/classification_samples_test.csv")
     
