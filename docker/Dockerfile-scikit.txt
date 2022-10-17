@@ -1,0 +1,13 @@
+# syntax=docker/dockerfile:1
+FROM python:3.9
+
+RUN mkdir /notebooks
+WORKDIR /notebooks
+COPY ./scikit-learn /notebooks/scikit-learn
+COPY ./datasets /notebooks/datasets
+
+RUN pip install numpy pandas scikit-learn notebook catboost xgboost lightgbm matplotlib seaborn yellowbrick
+
+CMD ["jupyter","notebook","--ip=0.0.0.0","--port=8888","--no-browser","--allow-root", "--notebook-dir=/notebooks"]
+
+EXPOSE 8888

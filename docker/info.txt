@@ -8,3 +8,24 @@ Docker
 
 
 RUN /usr/local/bin/python -m pip install --upgrade pip
+
+
+PYCARET
+docker build -t pycaret .
+docker run --name pycaret -p 8888:8888 pycaret
+
+AUTO VIML
+docker build -t auto_viml .
+docker run --name auto_viml -p 8888:8888 auto_viml
+
+H2O
+docker build -t h2o .
+docker run --name h2o -p 8888:8888 h2o
+
+TPOT
+docker build -t tpot .
+docker run --name tpot -p 8888:8888 tpot
+
+SCIKIT LEARN
+docker build -t scikit-learn .
+docker run --name scikit-learn -p 8888:8888 scikit-learn
